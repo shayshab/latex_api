@@ -1,0 +1,89 @@
+Below is a LaTeX CV template that you can use to showcase your qualifications for the Finance Analyst position at Charles. This template is structured to highlight your education, experience, skills, and other relevant sections in a clean and professional manner.
+
+```latex
+\documentclass[a4paper,10pt]{article}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+
+% Formatting
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+% Command to add contact information
+\newcommand{\contactinfo}[2]{
+  \begin{tabular}{>{\centering\arraybackslash}m{0.5\linewidth}>{\centering\arraybackslash}m{0.5\linewidth}}
+    Email: \href{mailto:#1}{#1} & Phone: #2 \\
+  \end{tabular}
+}
+
+% CV starts here
+\begin{document}
+
+% Name and Title
+\begin{center}
+    \huge{Your Name} \\
+    \large{Finance Analyst}
+\end{center}
+
+% Contact Information
+\contactinfo{your.email@example.com}{+49 123 456 7890}
+
+% Professional Summary
+\section*{Professional Summary}
+Aspiring Finance Analyst with a Master's degree in Finance and relevant experience in fast-paced environments. Skilled in financial operations, process optimization, and strategic financial analysis. Fluent in English and German. Committed to driving business efficiency and supporting business growth.
+
+% Education
+\section*{Education}
+\textbf{Master of Finance}, Your University, City, Country \\
+Year -- Year
+
+\textbf{Bachelor of Business Administration}, Your University, City, Country \\
+Year -- Year
+
+% Experience
+\section*{Professional Experience}
+
+\textbf{Finance Intern}, Company Name, Location \\
+Month Year -- Month Year
+\begin{itemize}[leftmargin=*]
+    \item Assisted in monthly and annual closing processes and financial reporting, ensuring accuracy and timeliness.
+    \item Developed financial models to support strategic initiatives and investment decisions.
+    \item Collaborated with sales and customer success teams to resolve billing and contract issues, improving accounts receivable turnover.
+    \item Created presentations and reports for management and stakeholders.
+\end{itemize}
+
+% Skills
+\section*{Skills}
+\begin{itemize}[leftmargin=*]
+    \item Proficient in Microsoft Excel, PowerPoint, and Outlook.
+    \item Strong analytical and data-driven mindset.
+    \item Experience with financial software: Datev, Pleo, and Chargebee.
+    \item Basic knowledge of SQL and experience with data visualization tools like Looker and PowerBI.
+\end{itemize}
+
+% Other Sections
+\section*{Languages}
+\begin{itemize}[leftmargin=*]
+    \item English -- Fluent
+    \item German -- Fluent
+\end{itemize}
+
+\section*{Interests}
+\begin{itemize}[leftmargin=*]
+    \item Conversational Commerce
+    \item Financial Markets
+    \item Process Improvement
+\end{itemize}
+
+\end{document}
+```
+
+To personalize the template, replace placeholders such as `Your Name`, `your.email@example.com`, and educational and professional details with your information. This template assumes a basic knowledge of LaTeX for customization. If you're not familiar with LaTeX, ensure you have a LaTeX editor to modify and compile this document.

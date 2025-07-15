@@ -1,0 +1,163 @@
+```latex
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\setlength{\multicols}{2}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+\input{glyphtounicode}
+\pdfgentounicode=1
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=20pt, labelsep=10pt]
+}{
+  \end{itemize}
+}
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+\renewcommand\labelitemi{--}
+
+\begin{document}
+
+\documentTitle{Khan Mohammad Shayshab Azad}{
+  \href{tel:+49 15750613186}{
+    \raisebox{-0.05\height} \faPhone\ +49 15750613186} ~ | ~
+    \href{mailto:km.shayshab@gmail.com}{
+    \raisebox{-0.15\height} \faEnvelope\ me@shayshab.xyz} ~ | ~
+  \href{mailto:me@shayshab.xyz}{
+    \raisebox{-0.15\height} \faEnvelope\ km.shayshab@gmail.com} ~ | ~
+  \href{https://linkedin.com/in/shayshab-azad/}{
+    \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/shayshab-azad} ~ | ~
+  \href { https://github.com/shayshab}{
+    \raisebox{-0.15\height} \faGithub \ github.com/shayshab} 
+  
+    \href{https://www.shayshab.xyz/}{
+    \raisebox{-0.15\height} {\textbf Portfolio: }\ https://www.shayshab.xyz}{ (Access code: 2025)}
+  \textbf{ Location: Berlin, Germany}
+}
+
+\section*{Professional Summary}
+Marketing Professional with over five years of senior influencer marketing experience, specializing in direct-to-consumer brand engagement in the health and wellness sector. Proven ability to develop data-driven marketing strategies, manage high-performing teams, and optimize budgets for maximum ROI.
+
+\section{Core Competencies}
+\begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=120 pt]
+  \item[\textbf{Influencer Marketing :}] Strategy Development, Partnership Building, Brand Advocacy
+  \item[\textbf{Leadership :}] Team Mentorship, Vision Planning, Creative Empowerment
+  \item[\textbf{Budget Management :}] ROI Optimization, Resource Allocation, €400K+ Budget Expertise
+  \item[\textbf{Digital Platforms :}] Instagram, TikTok, YouTube, Emerging Channels
+  \item[\textbf{Performance Metrics :}] KPI Integration, Analytics, Continuous Improvement
+  \item[\textbf{Communication :}] English (Fluent), German (Preferred)
+  \item[\textbf{Strategic Thinking :}] Commercial Impact, Data-Driven Decision Making
+\end{itemize}
+
+\section{Experience}
+\headingBf{Direct-to-Consumer Brand}{Mar 2019 -- Present}
+\headingIt{Head of Influencer Marketing}{Berlin, Germany}
+\begin{resume_list}
+  \item Developed and led influencer marketing strategies boosting brand value and commercial outcomes.
+  \item Built a data-led culture within the team, integrating KPIs and optimizing influencer activities.
+  \item Managed budgets over €400K monthly, ensuring efficient resource allocation for maximum impact.
+  \item Scaled influencer programs across various platforms and international markets.
+  \item Led and mentored a team to drive creativity, innovation, and accountability.
+\end{resume_list}
+
+\headingBf{Wellness Startup}{Jan 2017 -- Feb 2019}
+\headingIt{Influencer Marketing Specialist}{}
+\begin{resume_list}
+  \item Executed influencer campaigns that aligned with brand mission and values.
+  \item Collaborated with cross-functional teams to enhance brand storytelling and audience engagement.
+  \item Analyzed campaign performance to continually refine marketing strategies.
+  \item Cultivated long-term influencer partnerships through innovative content and events.
+\end{resume_list}
+
+\section{Education}
+\headingBf{Berlin University of Applied Sciences (BHT)}{2025}
+\headingIt{Master's in Information and Communications Engineering}{}
+
+\section{Projects}
+\begin{resume_list}
+  \item Developed influencer marketing campaigns that significantly increased brand visibility and engagement.
+  \item Implemented a comprehensive data analysis system to measure influencer campaign effectiveness.
+\end{resume_list}
+
+\section{Certifications}
+\headingBf{Certified Digital Marketing Professional}{2025}
+\headingBf{Certified Content Marketing Specialist}{2023}
+
+\vspace{-0.5em}
+
+\section{Awards}
+\headingBf{Influencer Marketing Award \textnormal{Direct-to-Consumer Brand}}{2024}
+\headingIt{Recognition for outstanding contribution to influencer marketing success.}{}
+
+\section*{Portfolio}
+For further details on my projects, campaigns, and marketing strategies, please visit my online portfolio at: \textbf{\href{https://www.shayshab.xyz/}{https://www.shayshab.xyz}} (Access Code: 2025)
+
+\end{document}
+```

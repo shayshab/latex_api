@@ -1,0 +1,252 @@
+```latex
+\documentclass[letterpaper,10pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty
+%% NOTE: Everything between here and END_FILE can
+%% be relocated to "mteck.sty" and then included with:
+%\usepackage{mteck}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicols}{2}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+% Centered title along with subtitle between HR
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+% Create a footer with correct padding
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=20pt, labelsep=10pt]
+}{
+  \end{itemize}
+}
+
+% Formats an item to use as an itemized title
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+%===================%
+% Khan M. Shayshab Azad's Resume %
+%===================%
+
+\begin{document}
+
+  %---------%
+  % Heading %
+  %---------%
+
+  \documentTitle{Khan Mohammad Shayshab Azad}{
+    \href{tel:+49 15750613186}{
+      \raisebox{-0.05\height} \faPhone\ +49 15750613186} ~ | ~
+      \href{mailto:km.shayshab@gmail.com}{
+      \raisebox{-0.15\height} \faEnvelope\ me@shayshab.xyz} ~ | ~
+    \href{mailto:me@shayshab.xyz}{
+      \raisebox{-0.15\height} \faEnvelope\ km.shayshab@gmail.com} ~ | ~
+    \href{https://linkedin.com/in/shayshab-azad/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/shayshab-azad} ~ | ~
+    \href { https://github.com/shayshab}{
+      \raisebox{-0.15\height} \faGithub \ github.com/shayshab} 
+     
+      \href{https://www.shayshab.xyz/}{
+      \raisebox{-0.15\height} {\textbf Portfolio: }\ https://www.shayshab.xyz}{ (Access code: 2025)}
+    \textbf{ Location: Berlin, Germany}
+  }
+
+\section*{Professional Summary}
+Experienced Influencer Marketing and Partnerships Lead with a passion for the health and wellness sector. Proven track record in driving brand growth and fostering long-lasting partnerships. Expertise in strategizing influencer outreach, managing high-impact campaigns, and embedding data-driven performance culture within teams.
+
+  %---------%
+  % Skills %
+  %--------
+
+   \section{Core Competencies}
+
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=120 pt]
+    \item[\textbf{Influencer Marketing :}] Strategy Development, Campaign Management, Brand Partnerships
+    \item[\textbf{Team Leadership :}] Mentorship, Vision Building, Creativity Encouragement
+    \item[\textbf{Data Analysis :}] KPIs Implementation, Commercial Impact Measurement, Optimization
+    \item[\textbf{Budget Management :}] Large-scale Budget Management, ROI Maximization
+    \item[\textbf{Strategic Thinking :}] Long-term Planning, Effective Execution, Market Expansion
+    \item[\textbf{Communication :}] Fluent in English, German Preferred
+  \end{itemize}
+
+  %------------%
+  % Experience %
+  %------------%
+
+\section{Experience}
+
+\headingBf{Zazu Digital Talent}{2024 -- Present}
+\headingIt{Head of Influencer Marketing and Partnerships}{}
+\begin{resume_list}
+  \item Lead the transformation of influencer marketing strategy, enhancing both brand value and measurable commercial outcomes.
+  \item Fostered a data-led culture, embedding KPIs and continuous optimization into influencer activities.
+  \item Scaled influencer and partnership programs across platforms like Instagram, TikTok, and international markets.
+  \item Managed a monthly budget of over €400K, ensuring efficient allocation and maximum ROI.
+  \item Developed long-term content partnerships, aligning campaigns with the brand’s mission and values.
+\end{resume_list}
+
+\vspace{-0.5em}
+\headingBf{HealthWave Inc.}{2019 -- 2024}
+\headingIt{Senior Influencer Marketing Manager}{}
+\begin{resume_list}
+  \item Spearheaded influencer campaigns that increased brand engagement by 50% within one year.
+  \item Built a high-performing team, fostering an environment of innovation and accountability.
+  \item Implemented strategic programs that expanded brand presence in new international markets.
+  \item Guided budget management, balancing brand and performance outcomes.
+\end{resume_list}
+
+  %-----------%
+  % Education %
+  %-----------%
+\newpage
+\section{Education}
+
+\headingBf{Berlin University of Applied Sciences (BHT)}{2025}
+\headingIt{Master's in Information and Communications Engineering}{}
+\begin{resume_list}
+  \item Developed skills in data analysis and strategic planning applicable to marketing.
+\end{resume_list}
+
+\vspace{-1em}
+
+\section{Projects}
+
+\begin{resume_list}
+    \item Led the project to design a digital influencer network, expanding brand reach by 30%.
+    \item Created a compliance tracker for marketing regulations, ensuring alignment with GDPR.
+\end{resume_list}
+
+\vspace{-1em}
+
+\section{Certifications}
+
+\headingBf{Certified Digital Marketing Professional}{2025}
+\headingBf{Data-Driven Marketing Certificate}{2023}
+
+\vspace{-0.5em}
+
+\section{Training}
+\headingBf{Advanced Influencer Strategies \textnormal{Marketing Institute}}{2025}
+\headingBf{Certified Social Media Specialist \textnormal{Alison}}{2023}
+
+\vspace{-0.5em}
+
+\section{Awards}
+
+\headingBf{Marketing Excellence Award \textnormal{European Marketing Federation}}{2024}
+\headingIt{Recognized for strategic innovation in influencer marketing and partnerships.}{}
+
+\vspace{-0.5em}
+
+\section*{Portfolio}
+
+For further details on my projects, certificates, experiences, and reference letters, please visit my online portfolio at: \textbf{\href{https://www.shayshab.xyz/}{https://www.shayshab.xyz}} (Access Code: 2025)
+\end{document}
+```
