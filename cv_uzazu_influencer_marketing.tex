@@ -1,0 +1,206 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\setlength{\multicols}{2}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=20pt, labelsep=10pt]
+}{
+  \end{itemize}
+}
+
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+\renewcommand\labelitemi{--}
+
+\begin{document}
+
+  \documentTitle{Khan Mohammad Shayshab Azad}{
+    \href{tel:+49 15750613186}{
+      \raisebox{-0.05\height} \faPhone\ +49 15750613186} ~ | ~
+      \href{mailto:km.shayshab@gmail.com}{
+      \raisebox{-0.15\height} \faEnvelope\ me@shayshab.xyz} ~ | ~
+    \href{mailto:me@shayshab.xyz}{
+      \raisebox{-0.15\height} \faEnvelope\ km.shayshab@gmail.com} ~ | ~
+    \href{https://linkedin.com/in/shayshab-azad/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/shayshab-azad} ~ | ~
+    \href { https://github.com/shayshab}{
+      \raisebox{-0.15\height} \faGithub \ github.com/shayshab} 
+     
+      \href{https://www.shayshab.xyz/}{
+      \raisebox{-0.15\height} {\textbf Portfolio: }\ https://www.shayshab.xyz}{ (Access code: 2025)}
+    \textbf{ Location: Berlin, Germany}
+  }
+
+
+
+\section*{Professional Summary}
+Strategic Influencer Marketing Professional with over five years of experience in leading high-impact marketing strategies. Skilled in developing data-driven influencer campaigns, optimizing partnerships across international markets, and managing budgets to maximize ROI. Proven track record in building brand advocacy through innovative marketing and content initiatives.
+
+   \section{Core Competencies}
+
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=120 pt]
+   
+    \item[\textbf{Influencer Strategy:}] Campaign Development, Long-term Brand Advocacy, Content Initiatives
+    \item[\textbf{Leadership & Mentorship:}] Team Building, Vision Setting, Cultivating Creativity
+    \item[\textbf{Data-Driven Marketing:}] KPI Integration, Performance Analytics, Continuous Optimization
+    \item[\textbf{Budget Management:}] Efficient Resource Allocation, ROI Maximization
+    \item[\textbf{International Growth:}] Scaling Campaigns, Multi-channel Strategy, Cross-market Partnerships
+    \item[\textbf{Professional Language Skills:}] English (Fluent), German (Intermediate)
+  \end{itemize}
+
+\section{Experience}
+
+\headingBf{Eurex - Deutsche Börse Group}{Apr 2023 -- Feb 2024}
+\headingIt{Marketing Strategist}{}
+\begin{resume_list}
+  \item Developed influencer marketing strategies that enhanced brand presence on Instagram, TikTok, and YouTube.
+  \item Guided a team in creating innovative content campaigns, fostering an environment of creativity and scalability.
+  \item Managed and optimized a significant marketing budget, ensuring alignment with brand goals and KPI outcomes.
+  \item Expanded partnership programs across new platforms and regions, increasing brand footprint significantly.
+\end{resume_list}
+
+\vspace{-0.5em}
+\headingBf{YAS.life (Freelance)}{Oct 2023 -- Feb 2024}
+\headingIt{Influencer Marketing Consultant}{}
+\begin{resume_list}
+  \item Led influencer partnerships that drove brand engagement and consumer loyalty.
+  \item Implemented analytics to track performance, leading to data-informed strategic improvements.
+  \item Cultivated relationships with key influencers, aligning campaign efforts with company values and mission.
+\end{resume_list}
+
+\vspace{-0.5em}
+\headingBf{Decoders Squad}{May 2019 -- Apr 2021}
+\headingIt{Head of Marketing Partnerships}{}
+\begin{resume_list}
+  \item Spearheaded international influencer marketing tactics, scaling brand impact in targeted markets.
+  \item Facilitated performance-driven marketing strategies by integrating comprehensive data analysis.
+  \item Established a structured leadership approach, fostering a culture of accountability and innovation.
+\end{resume_list}
+
+\section{Education}
+
+\headingBf{Berlin University of Applied Sciences (BHT)}{2025}
+\headingIt{Master's in Marketing and Communications}{}
+\begin{resume_list}
+  \item Relevant Courses: Strategic Marketing, Digital Media, Brand Management.
+\end{resume_list}
+
+\vspace{-1em}
+
+\section{Projects}
+
+\begin{resume_list}
+    \item Developed a strategic influencer marketing framework for a direct-to-consumer brand, resulting in a 40% increase in engagement.
+    \item Designed a cross-platform campaign for product launches, ensuring alignment with brand ethos and maximizing reach.
+    \item Spearheaded a digital transformation initiative to embed KPI-driven decision-making processes firmly within marketing operations.
+\end{resume_list}
+
+\vspace{-1em}
+
+\section{Certifications}
+
+\headingBf{Certified Digital Marketing Leader}{2023}
+\headingBf{Advanced Influencer Marketing Certification}{2022}
+\headingBf{Strategic Brand Management Specialist}{2021}
+
+\vspace{-0.5em}
+
+\section{Training}
+\headingBf{Digital Marketing Analytics \textnormal{Coursera}}{2024}
+\headingBf{Leadership in Marketing \textnormal{LinkedIn Learning}}{2023}
+\headingBf{Influencer Marketing Strategies \textnormal{Udemy}}{2022}
+
+\vspace{-0.5em}
+
+\section{Awards}
+
+\headingBf{Excellence in Influencer Marketing \textnormal{Marketing Awards Berlin}}{2023}
+\headingIt{Recognized for outstanding achievement in influencer marketing strategy and execution.}{}
+
+\vspace{-0.5em}
+
+\section*{Portfolio}
+
+For further details on my projects, certificates, experiences, and reference letters, please visit my online portfolio at: \textbf{\href{https://www.shayshab.xyz/}{https://www.shayshab.xyz}} (Access Code: 2025)
+\end{document}
