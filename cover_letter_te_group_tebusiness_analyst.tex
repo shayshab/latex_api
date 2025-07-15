@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{letter}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+% Define colors
+\definecolor{accentColor}{HTML}{0e6e55}
+
+% Custom formatting
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Custom letter formatting
+\makeatletter
+\renewcommand{\opening}[1]{\thispagestyle{firstpage}%
+  \par\noindent{\color{accentColor}\rule{\textwidth}{1pt}}\par
+  \vspace{1em}\par\noindent#1\par\vspace{1em}}
+\renewcommand{\closing}[1]{\par\noindent#1\par
+  \vspace{2\parskip}%
+  \par\noindent\@author\par}
+\makeatother
+
+\begin{document}
+
+% Sender information
+\begin{flushright}
+\textbf{Khan Mohammad Shayshab Azad}\\
++49 15750613186\\
+me@shayshab.xyz\\
+linkedin.com/in/shayshab-azad\\
+github.com/shayshab
+\end{flushright}
+
+% Date
+\begin{flushright}
+\today
+\end{flushright}
+
+% Recipient
+\begin{flushleft}
+Te Group\\
+[Company Address]\\
+[City, State ZIP]
+\end{flushleft}
+
+\opening{Dear Hiring Manager,}
+
+I am writing to express my interest in the teBusiness Analyst role at Te Group. With my background in business analysis and expertise in data-driven decision-making, I believe I would be a valuable addition to your team.
+
+In my previous role at XYZ Solutions, I led the development of a new analytics dashboard that improved reporting speed by 30%. Additionally, I implemented a strategic data review process, which resulted in a 20% increase in operational efficiency. My experience with SQL and data visualization tools aligns perfectly with the requirements outlined in your job posting.
+
+What particularly excites me about Te Group is your commitment to innovation and transformative technology solutions. I am impressed by your recent initiatives in digital transformation and would be thrilled to contribute to your continued success.
+
+Thank you for considering my application. I look forward to the opportunity to discuss how my skills and experience can benefit Te Group.
+
+\closing{Sincerely,}
+
+\end{document}
